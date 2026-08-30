@@ -10,6 +10,7 @@ import { env } from './config/env.js';
 import { AppError } from './lib/errors.js';
 import { fetchProfileByVanity } from './lib/linkedin.js';
 import { extractVanityName, resolveProfileBody } from './schemas/profile.js';
+import { LANDING_PAGE_HTML } from './lib/landing.js';
 
 export async function buildApp() {
   const app = Fastify({
@@ -64,6 +65,20 @@ export async function buildApp() {
       error: { code: appError.code, message: appError.message, requestId: request.id }
     });
   });
+
+  app.get(
+    '/',
+    {
+      config: { rateLimit: false },
+      schema: {
+        hide: true
+      }
+    },
+    async (request, reply) => {
+      reply.type('text/html');
+      return LANDING_PAGE_HTML;
+    }
+  );
 
   app.get(
     '/health',
