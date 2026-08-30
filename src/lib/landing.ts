@@ -418,6 +418,14 @@ export const LANDING_PAGE_HTML = `<!DOCTYPE html>
     <div class="card">
       <div class="card-title">📖 Reference & Guides</div>
       <div class="actions-list">
+        <a href="https://github.com/Jayanthmurala/TrossLinkedInProfileAPI" class="action-btn" target="_blank">
+          <div class="action-icon">🐱</div>
+          <div>
+            <div>GitHub Repository</div>
+            <div style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">View project source code</div>
+          </div>
+        </a>
+
         <a href="/docs" class="action-btn" target="_blank">
           <div class="action-icon">📘</div>
           <div>
