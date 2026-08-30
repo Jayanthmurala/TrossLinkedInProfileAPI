@@ -263,3 +263,14 @@ src/
 test/
   └── app.test.ts       # App endpoints & normalizer integration tests
 ```
+
+---
+
+## 👤 Developer Profile
+
+*   **Name**: Jayanth Murala
+*   **Portfolio**: [jayanthmurala.com](https://jayanthmurala.com)
+*   **GitHub**: [@Jayanthmurala](https://github.com/Jayanthmurala)
+*   **LinkedIn**: [in/jayanthmurala](https://linkedin.com/in/jayanthmurala)
+*   **Resume**: [View Resume 📄](https://drive.google.com/file/d/1-32BsURpK_c2q-6GUlLT6afryX9VBvbj/view)
+*   **Contact**: [jayanthmurala1@gmail.com](mailto:jayanthmurala1@gmail.com) | +91 9392971945

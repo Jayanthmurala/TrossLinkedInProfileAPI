@@ -33,8 +33,8 @@ export const LANDING_PAGE_HTML = `<!DOCTYPE html>
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 2rem 1rem;
+      justify-content: flex-start;
+      padding: 4rem 1rem;
       overflow-x: hidden;
       position: relative;
     }
@@ -374,6 +374,96 @@ export const LANDING_PAGE_HTML = `<!DOCTYPE html>
     @keyframes rotate {
       100% { transform: rotate(360deg); }
     }
+
+    /* Custom scrollbar styling to look clean and dark */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 99px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      margin-top: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      text-align: left;
+    }
+
+    .profile-card:hover {
+      border-color: rgba(99, 102, 241, 0.25);
+    }
+
+    .profile-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 0.75rem;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 520px) {
+      .profile-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .profile-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .profile-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .profile-value {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-main);
+      word-break: break-all;
+    }
+
+    .profile-value a {
+      color: var(--accent-indigo);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .profile-value a:hover {
+      color: var(--accent-blue);
+    }
   </style>
 </head>
 <body>
@@ -461,38 +551,42 @@ export const LANDING_PAGE_HTML = `<!DOCTYPE html>
   </div>
 
   <footer>
-    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--card-border); border-radius: 1rem; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; backdrop-filter: blur(10px);">
-      <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--accent-blue); display: flex; align-items: center; gap: 0.5rem;">
+    <div class="profile-card">
+      <div class="profile-title">
         👤 Developer Profile
       </div>
-      <div style="display: grid; grid-template-columns: 1fr; gap: 0.75rem; font-size: 0.8rem; line-height: 1.5;">
-        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
-          <span style="color: var(--text-muted);">Name:</span>
-          <strong>Jayanth Murala</strong>
+      <div class="profile-grid">
+        <div class="profile-item">
+          <span class="profile-label">Name</span>
+          <span class="profile-value">Jayanth Murala</span>
         </div>
-        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
-          <span style="color: var(--text-muted);">Email:</span>
-          <a href="mailto:jayanthmurala1@gmail.com" style="color: var(--accent-indigo); text-decoration: none; font-weight: 500;">jayanthmurala1@gmail.com</a>
+        <div class="profile-item">
+          <span class="profile-label">Email</span>
+          <span class="profile-value"><a href="mailto:jayanthmurala1@gmail.com">jayanthmurala1@gmail.com</a></span>
         </div>
-        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
-          <span style="color: var(--text-muted);">Phone:</span>
-          <a href="tel:+919392971945" style="color: var(--text-main); text-decoration: none; font-weight: 500;">+91 9392971945</a>
+        <div class="profile-item">
+          <span class="profile-label">Phone</span>
+          <span class="profile-value"><a href="tel:+919392971945">+91 9392971945</a></span>
         </div>
-        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
-          <span style="color: var(--text-muted);">GitHub:</span>
-          <a href="https://github.com/Jayanthmurala" target="_blank" style="color: var(--accent-indigo); text-decoration: none; font-weight: 500;">github.com/Jayanthmurala</a>
+        <div class="profile-item">
+          <span class="profile-label">Portfolio</span>
+          <span class="profile-value"><a href="https://jayanthmurala.com" target="_blank">jayanthmurala.com</a></span>
         </div>
-        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
-          <span style="color: var(--text-muted);">LinkedIn:</span>
-          <a href="https://linkedin.com/in/jayanthmurala" target="_blank" style="color: var(--accent-indigo); text-decoration: none; font-weight: 500;">linkedin.com/in/jayanthmurala</a>
+        <div class="profile-item">
+          <span class="profile-label">GitHub</span>
+          <span class="profile-value"><a href="https://github.com/Jayanthmurala" target="_blank">github.com/Jayanthmurala</a></span>
         </div>
-        <div style="display: flex; justify-content: space-between; padding-bottom: 0.35rem;">
-          <span style="color: var(--text-muted);">Resume:</span>
-          <a href="https://drive.google.com/file/d/1-32BsURpK_c2q-6GUlLT6afryX9VBvbj/view" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">View Resume 📄</a>
+        <div class="profile-item">
+          <span class="profile-label">LinkedIn</span>
+          <span class="profile-value"><a href="https://linkedin.com/in/jayanthmurala" target="_blank">linkedin.com/in/jayanthmurala</a></span>
+        </div>
+        <div class="profile-item" style="grid-column: span 1;">
+          <span class="profile-label">Resume</span>
+          <span class="profile-value"><a href="https://drive.google.com/file/d/1-32BsURpK_c2q-6GUlLT6afryX9VBvbj/view" target="_blank">View Resume 📄</a></span>
         </div>
       </div>
     </div>
-    <div style="margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted);">
+    <div style="margin-top: 2rem; font-size: 0.75rem; color: var(--text-muted);">
       LinkedIn Profile Resolver API &bull; Built in Node.js &bull; Open-source
     </div>
   </footer>
