@@ -1,6 +1,9 @@
 # 🔗 LinkedIn Profile Resolver API
 
 <p align="center">
+  <a href="https://trosslinkedinprofileapi.jayanthmurala.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-🚀-blueviolet?style=for-the-badge" alt="Live Demo" />
+  </a>
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify&logoColor=white" alt="Fastify" />
   <img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod" />

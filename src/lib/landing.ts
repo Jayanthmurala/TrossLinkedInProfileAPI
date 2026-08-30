@@ -461,7 +461,40 @@ export const LANDING_PAGE_HTML = `<!DOCTYPE html>
   </div>
 
   <footer>
-    LinkedIn Profile Resolver API &bull; Built in Node.js &bull; Open-source
+    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--card-border); border-radius: 1rem; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; backdrop-filter: blur(10px);">
+      <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--accent-blue); display: flex; align-items: center; gap: 0.5rem;">
+        👤 Developer Profile
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr; gap: 0.75rem; font-size: 0.8rem; line-height: 1.5;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
+          <span style="color: var(--text-muted);">Name:</span>
+          <strong>Jayanth Murala</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
+          <span style="color: var(--text-muted);">Email:</span>
+          <a href="mailto:jayanthmurala1@gmail.com" style="color: var(--accent-indigo); text-decoration: none; font-weight: 500;">jayanthmurala1@gmail.com</a>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
+          <span style="color: var(--text-muted);">Phone:</span>
+          <a href="tel:+919392971945" style="color: var(--text-main); text-decoration: none; font-weight: 500;">+91 9392971945</a>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
+          <span style="color: var(--text-muted);">GitHub:</span>
+          <a href="https://github.com/Jayanthmurala" target="_blank" style="color: var(--accent-indigo); text-decoration: none; font-weight: 500;">github.com/Jayanthmurala</a>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 0.35rem;">
+          <span style="color: var(--text-muted);">LinkedIn:</span>
+          <a href="https://linkedin.com/in/jayanthmurala" target="_blank" style="color: var(--accent-indigo); text-decoration: none; font-weight: 500;">linkedin.com/in/jayanthmurala</a>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding-bottom: 0.35rem;">
+          <span style="color: var(--text-muted);">Resume:</span>
+          <a href="https://drive.google.com/file/d/1-32BsURpK_c2q-6GUlLT6afryX9VBvbj/view" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">View Resume 📄</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted);">
+      LinkedIn Profile Resolver API &bull; Built in Node.js &bull; Open-source
+    </div>
   </footer>
 </div>
 
